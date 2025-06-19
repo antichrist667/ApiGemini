@@ -2,18 +2,17 @@ import pandas as pd
 from google import generativeai as genai
 
 
-api_key = os.getenv("GEMINI_API_KEY")
-if not api_key:
-    raise ValueError("La variable de entorno GEMINI_API_KEY no está definida.")
-genai.configure(api_key=api_key)
+genai.configure(api_key="AIzaSyAfWj_Yx6TV6b96lo_7_tMyxjhf3pI26-4")
 
 
 df = pd.read_csv("100frases.csv")
 frases = df["Frase"].dropna().tolist()
 
+if True:
+    print("Esto no debería estar aquí (smell)")
 
 
-
+frases = 42  
 frases_texto = "\n".join(f"- {frase}" for frase in frases)      
 
 model = genai.GenerativeModel("gemini-1.5-flash")
