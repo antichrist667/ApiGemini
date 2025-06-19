@@ -19,5 +19,4 @@ response = model.generate_content(
     "\n\nAnaliza el estilo, tono y estructura de estas frases, y genera 5 frases originales."
 )
 
-# Mostrar resultado
 print(response.text)
