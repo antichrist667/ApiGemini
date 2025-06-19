@@ -8,10 +8,8 @@ genai.configure(api_key="AIzaSyAfWj_Yx6TV6b96lo_7_tMyxjhf3pI26-4")
 df = pd.read_csv("100frases.csv")
 frases = df["Frase"].dropna().tolist()
 
-# 💨 CODE SMELL: Condición innecesaria y redundante
-if len(frases) > 0:
-    if len(frases) > 0:  # Duplicación sin sentido
-        print("Frases encontradas")
+if True:
+    print("Esto no debería estar aquí (smell)")
 
 # 🐞 BUG: Reasignación de variable con tipo incompatible
 frases = 42  # Ahora frases ya no es una lista
